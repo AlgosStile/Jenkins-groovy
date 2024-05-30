@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'Hello Pipeline'
                 script {
-                    buildProject name: 'TestProject006'
+                    buildProject(name: 'TestProject006')
                 }
             }
         }
