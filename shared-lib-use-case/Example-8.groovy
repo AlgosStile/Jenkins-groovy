@@ -9,7 +9,8 @@ pipeline {
                 script {
                     def script_content = libraryResource 'org/scripts/scriptTest.sh'
                     writeFile file: './script.sh', text: script_content
-                    sh 'bash ./script.sh'
+                    bash script.sh
+
                 }
             }
         }
