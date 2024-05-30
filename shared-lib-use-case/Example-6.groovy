@@ -7,9 +7,11 @@ pipeline {
             steps {
                 echo 'Hello Pipeline'
                 script {
-                    buildProject(name: 'TestProject006')
+                    // Пример вызова функции из библиотеки
+                    buildProject name: 'TestProject006'
                 }
             }
         }
     }
 }
+
