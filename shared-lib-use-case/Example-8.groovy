@@ -12,7 +12,7 @@ pipeline {
                     // Используем bat для выполнения скрипта через командную оболочку Windows
                     bat '''
                     @echo off
-                    bash ./script.sh
+                    "D:\\Program Files\\Git\\bin\\bash.exe" ./script.sh
                     '''
                 }
             }
