@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'build building'
-                sh 'ls -l'
+                bat 'dir'
             }
         }
         stage('Deploy') {

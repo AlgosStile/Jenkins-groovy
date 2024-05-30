@@ -14,7 +14,7 @@ pipeline {
                     or $SERVICE_CREDS_USR
                     or $SERVICE_CREDS_PSW */
                 echo "Service user is $SERVICE_CREDS_USR"
-                sh 'echo "Service password is $SERVICE_CREDS_PSW"'
+                bat 'echo "Service password is $SERVICE_CREDS_PSW"'
             }
         }
         stage('Build') {
@@ -22,7 +22,7 @@ pipeline {
                 echo "build ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "This is path ${env.javaVersion}"
                 echo "This is path $javaVersion"
-                sh 'printenv'
+                bat 'printenv'
             }
         }
     }
