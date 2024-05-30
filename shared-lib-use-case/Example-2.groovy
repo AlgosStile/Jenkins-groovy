@@ -12,7 +12,7 @@ pipeline {
                     def branch = 'main'
                     checkoutTool.checkOutFrom(url, branch)
                 }
-                sh "ls -lha"
+                bat 'dir'
             }
         }
     }
