@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools {
-        maven 'M3'
+        maven 'maven_3'
     }
     stages {
         stage('Build') {
             steps {
-                sh 'mvn --version'
+                bat 'mvn --version'
             }
         }
     }
