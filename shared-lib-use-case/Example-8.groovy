@@ -9,8 +9,11 @@ pipeline {
                 script {
                     def script_content = libraryResource 'org/scripts/scriptTest.sh'
                     writeFile file: './script.sh', text: script_content
-                    bat script.sh
-
+                    // Используем bat для выполнения скрипта через командную оболочку Windows
+                    bat '''
+                    @echo off
+                    bash ./script.sh
+                    '''
                 }
             }
         }
