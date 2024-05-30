@@ -7,10 +7,9 @@ pipeline {
             steps {
                 echo 'Pipeline example-8'
                 script {
-                    def script_content = libraryResource 'org/scripts/scriptTest.sh'
-                    writeFile file: './script.sh', text: script_content
-                    bash script.sh
-
+                    def script_content = libraryResource 'org/scripts/scriptTest.ps1'
+                    writeFile file: './script.ps1', text: script_content
+                    powershell './script.ps1'
                 }
             }
         }
